@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos Literales en JS</title>
+</head>
+<body>
+    <script>
+    // objetos genericos
+
+    var miPerro = {
+        nombre: "Lorenzo",
+        edad:7,
+        saludar: function(nombre, edad){
+            console.log('Hola mi nombre es ' + nombre + ' y soy muy canson@...' + ' y tengo ' + edad + ' añitos de joder la vida ');
+        }
+        
+    };
+
+    console.log("Me llamo " + miPerro.nombre + ' y tengo ' + miPerro.edad );
+    miPerro.saludar('Molly', 7)   
+    </script>
+</body>
+</html>
