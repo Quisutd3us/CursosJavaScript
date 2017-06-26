@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabajando con propiedades Privadas | JS OBJETOS</title>
+</head>
+<body>
+
+    <script>
+        function calculadoraCelsius(gradosCelsius)
+        {
+            this.farenheight = (gradosCelsius * 1,8 ) + 32;
+            this.kelvin = gradosCelsius + 273,15;
+            this.Celsius = gradosCelsius;
+        }
+
+        var operacion1 =new calculadoraCelsius(3);
+        console.log(operacion1.Celsius +" ° Celsius " + " equivalen a " + operacion1.farenheight + " grados F");
+        console.log(operacion1.Celsius +" ° Celsius " + " equivalen a " + operacion1.kelvin + " grados K ");
+
+        var operacion2 =new calculadoraCelsius(20);
+        console.log(operacion2.Celsius +" ° Celsius " + " equivalen a " + operacion2.farenheight + " grados F");
+        console.log(operacion2.Celsius +" ° Celsius " + " equivalen a " + operacion2.kelvin + " grados K ");
+        
+        var operacion3 =new calculadoraCelsius(346);
+        console.log(operacion3.Celsius +" ° Celsius " + " equivalen a " + operacion3.farenheight + " grados F");
+        console.log(operacion3.Celsius +" ° Celsius " + " equivalen a " + operacion3.kelvin + " grados K ");
+
+    </script>
+    
+</body>
+</html>
