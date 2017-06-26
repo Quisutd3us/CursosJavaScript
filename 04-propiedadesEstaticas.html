@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Defniendo Propiedades estaticas para un Objeto</title>
+</head>
+<body>
+
+    <script>
+    // ejemplo de una propiedad estatica en una clase predefinida
+
+    console.log(Math.PI);
+
+    function convertidorTemperatura()
+    {}
+
+    convertidorTemperatura.CELSIOS_A_FARENHEIGHT = (9/5);
+    convertidorTemperatura.FARENHEIGHT_A_CELSIOS = (5/9);
+    console.log("32° CELSIOS EQUIVALEN A " + ((32* convertidorTemperatura.CELSIOS_A_FARENHEIGHT) + 32)  + ' FRAENHEIT');
+    console.log("50° FARENHEIT EQUIVALEN A " + ((50-32)* convertidorTemperatura.FARENHEIGHT_A_CELSIOS) + ' CELSIOS');
+    </script>
+    
+</body>
+</html>
