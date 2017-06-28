@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>METODOS ESTATICOS</title>
+</head>
+<body>
+    <script>
+        function conversor(){
+        }
+
+        conversor.aRadianes =function(grados){
+            return (Math.PI*grados)/180
+        }
+        conversor.aGrados =function(radianes){
+            return (radianes*180)/Math.PI;
+        }
+
+        console.log("180 ° equivalen a " + conversor.aRadianes(180) + " radianes " );
+        console.log("2PI Radianes equivalen a " + conversor.aGrados(2*Math.PI) + " radianes " );
+
+    </script>
+</body>
+</html>
