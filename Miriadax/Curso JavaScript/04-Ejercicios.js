@@ -21,7 +21,7 @@ function valorCartas(carta) {
         var valorColor = 0;
         contadorRojas++;
         valorColor = carta.valor;
-        valorTotal += valorColor * 2;
+        valorTotal = valorColor * 2;
     } else if (carta.valor === 1 && carta.color === 'rojo') {
         var valorColor = 0;
         contadorAses++;
@@ -141,7 +141,6 @@ function imprimirJugador1(puntuacionImprimir) {
 
     console.log("\nResultados JUGADOR 1\n\n")
     console.log("Puntaje Total : " + puntuacionImprimir + " con " + contadorAses + " ases y " + contadorRojas + " cartas Rojas\n\n\n");
-    var jugadorNum = 0;
 
     //terminado la ejecucion del jugador1 llama a jugar al jugador2
     jugador2();
