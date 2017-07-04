@@ -291,7 +291,9 @@ function barajar(barajaPokerCroupier) { // intercambiar una carta aleatoria dent
     console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     console.log("                           ******** JUEGO POKER EN JS *********      ")
     console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    console.log("\n\n\n")
+    console.log("\n")
+    console.log("    ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+    console.log("\n")
     console.log("***************************************************************************************************")
     console.log("       ******** - REVOLVIENDO LAS CARTAS x 100 veces ... ASI A QUEDADO LA BARAJA: - *********      ")
     console.log("***************************************************************************************************")
@@ -333,7 +335,9 @@ function puntuar(barajaPokerCroupier) { //Puntuar dada una mano de 4 cartas sume
         }
         console.log("Valor total de la mano: " + total)
         console.log("\n\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        console.log("                           ********GRACIAS POR JUGAR - JUEGO POKER EN JS *********      ")
+        console.log("                        ******** GRACIAS POR JUGAR - JUEGO POKER EN JS *********      ")
+        console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        console.log("      +++ Desarrollado por david nariño para MOOC TELEFONICA @E-MAIL: dnarino@gmail.com  ++++")
         console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     }
 
