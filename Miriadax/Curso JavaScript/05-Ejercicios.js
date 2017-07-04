@@ -280,15 +280,63 @@ var barajaPoker = [
 // definiendo Metodo Barajar del Croupier
 
 
-var baraja;
-var Resultado;
+var barajaPuntuar;
 
-function barajar(barajaPokerCroupier) {
+function barajar(barajaPokerCroupier) { // intercambiar una carta aleatoria dentro de nuestra baraja por otra. Y esto lo hacemos 100 veces
+    for (var index = 1; index < 100; index++) {
+        barajaPokerCroupier = barajaPokerCroupier.sort(function () {
+            return Math.random() - 0.5
+        });
+    }
+    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    console.log("                           ******** JUEGO POKER EN JS *********      ")
+    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    console.log("\n\n\n")
+    console.log("***************************************************************************************************")
+    console.log("       ******** - REVOLVIENDO LAS CARTAS x 100 veces ... ASI A QUEDADO LA BARAJA: - *********      ")
+    console.log("***************************************************************************************************")
+    for (var topo in barajaPokerCroupier) {
+        console.log(barajaPokerCroupier[topo]);
+    }
+}
 
-    barajaPokerCroupier = barajaPokerCroupier.sort(function () {
-        return Math.random() - 0.5
-    });
-    return barajaPokerCroupier;
+function repartir(barajaPokerCroupier) { //: Repartir, que toma la carta en primera posición de la baraja y la elimina del array
+    console.log("*********************************************************************")
+    console.log("         ******** - SACANDO PRIMERA CARTA DEL MAZO -*********      ")
+    console.log("*********************************************************************")
+
+    console.log("Hay  :" + barajaPokerCroupier.length + " cartas en el Mazo..... Sacando la primera carta ..")
+    var cartaEliminada = barajaPokerCroupier.shift();
+    console.log("Ahora Hay  :" + barajaPokerCroupier.length + " cartas en el Mazo, La carta eliminada fue: ")
+    console.log(cartaEliminada);
+    barajaPuntuar = barajaPokerCroupier.slice();
+}
+
+function puntuar(barajaPokerCroupier) { //Puntuar dada una mano de 4 cartas sume su valor
+    if (barajaPokerCroupier == null) {
+        console.log("Debe decirle al Croupier que reparta para que pueda tener su Puntaje")
+    } else {
+
+        console.log("*********************************************************************")
+        console.log("         ******** - RESULTADO DE LA MANO -*********      ")
+        console.log("*********************************************************************")
+
+        var total = 0;
+        var nuevaBarajaPoker = barajaPuntuar.slice(0, 4);
+
+        for (var key in nuevaBarajaPoker) {
+            total += nuevaBarajaPoker[key].valor;
+            console.log(nuevaBarajaPoker[key]);
+        }
+        if (nuevaBarajaPoker[0].valor === nuevaBarajaPoker[1].valor === nuevaBarajaPoker[2].valor === nuevaBarajaPoker[3].valor) {
+            total += total * 10;
+        }
+        console.log("Valor total de la mano: " + total)
+        console.log("\n\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        console.log("                           ********GRACIAS POR JUGAR - JUEGO POKER EN JS *********      ")
+        console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    }
+
 }
 
 
@@ -297,14 +345,28 @@ function CrupierBarajar() {
     Croupier = {
         baraja: barajar
     };
-    Resultado = Croupier.baraja(barajaPoker);
-    imprimir(Resultado);
+    Croupier.baraja(barajaPoker);
+}
+
+function CrupierRepartir() {
+    Croupier = {
+        reparte: repartir
+    };
+    Croupier.reparte(barajaPoker);
+}
+
+function CrupierPuntuar() {
+    Croupier = {
+        score: puntuar
+    };
+    Croupier.score(barajaPuntuar);
 }
 
 
 
-function imprimir(resultado){
-    console.log(resultado);
-}
+function imprimir(resultado) {
 
+}
 CrupierBarajar();
+CrupierRepartir();
+CrupierPuntuar();
