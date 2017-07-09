@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="jumbotron">
+    <div class="jumbotron text-center bg-inverse text-white">
         <h1  class="display-3">V2b</h1>
         <p class="lead">Curso Js para diseñadores</p>
         <hr class="my-2">
@@ -26,6 +26,7 @@
                 <p class="h4" id="textoParrafo"></p>
                 <p>Posicion de palabra <strong>nihil</strong>: <span id="metiendole1"></span></p>
                 <p>Extraccion de parrafo desde el punto: <span id="metiendole2"></span></p>
+                <p>Cadena JSON <span id="metiendole3"></span></p>
             </div>
         </div>
     </div>
@@ -42,8 +43,10 @@
     document.getElementById("textoParrafo").innerHTML =miParrafo;
     document.getElementById("metiendole1").innerHTML =miParrafo.indexOf("nihil");
     document.getElementById("metiendole2").innerHTML =miParrafo.substr(62,50);
-
 </script>
+
+<script src="holamundoJson.js"></script>
+
 
 
 
