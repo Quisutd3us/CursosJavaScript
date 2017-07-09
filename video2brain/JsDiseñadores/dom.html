@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificando DOM con vanilla JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <style>
+    .modificando{
+        background-color: steelblue;
+        padding: 1rem;
+        color: whitesmoke;
+        font-size: 3rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .modificandoCita{
+        background-color: gray;
+        padding: 0.5rem;
+        color: red;
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="h1">Nombre del Detalle</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eos nulla, consequatur maxime repudiandae placeat
+                    deserunt! Ipsa ut, rerum quae saepe veritatis aut obcaecati possimus accusantium aperiam temporibus perferendis
+                    amet maiores. Officia sequi suscipit, eum labore velit, dignissimos eligendi. Repellat veniam provident
+                    ipsa aliquid dolorum, dolor laboriosam consequuntur minima neque molestiae architecto esse! Obcaecati
+                    sint repellendus cupiditate harum. Libero, dicta, autem facere exercitationem eum magnam delectus obcaecati
+                    mollitia sed, optio corporis labore ipsa harum repudiandae voluptate, quia. Consequuntur, veniam aperiam
+                    corporis et cumque sed, voluptate quos nihil molestias architecto, officiis aliquid ipsa. Esse voluptates,
+                    optio voluptas necessitatibus quasi earum itaque reiciendis adipisci dolor nesciunt saepe est nobis fugit
+                    aliquid ad consectetur qui ducimus repellat a quas enim sed laborum fugiat. Fuga voluptas deleniti quis
+                    sequi ea facere tenetur possimus ipsa maiores numquam repellat accusamus, assumenda, odit eaque repudiandae,
+                    illo alias minima officia, saepe. Quod molestiae iusto temporibus dolores expedita in, repudiandae quasi
+                    commodi, natus hic similique rerum sit quae soluta dolorem tempora quas dolorum reprehenderit recusandae
+                    adipisci cumque quos ipsum. Non veniam quasi adipisci obcaecati vel exercitationem veritatis numquam
+                    culpa voluptatem, assumenda officia, sint perferendis labore consequatur soluta quod quo, ut explicabo
+                    odio deleniti tempore. Est odio consectetur libero, repudiandae ipsum saepe praesentium temporibus id
+                    laboriosam. Natus ullam nesciunt asperiores, a at id eveniet, corporis aperiam officiis? Vitae, est dicta
+                    soluta molestiae! Excepturi nam atque est unde voluptates beatae, qui natus quis perspiciatis accusantium?</p>
+                <div class="card">
+                  <div class="card-block">
+                    <blockquote class="card-blockquote">
+                      <p id="login">Hora de Ingreso del Usuario : </p>
+                      <footer>Fecha : 
+                          <cite id="styleLogin" title="Source title">
+                                <script>
+                                    var miFecha = new Date();
+                                    var miDia = miFecha.getDay();
+                                    var miMes =miFecha.getMonth();
+                                    var miAno = miFecha.getFullYear();
+                                    var miHora =miFecha.getHours();
+                                    var miMinutos =miFecha.getMinutes();
+                                    var miSegundos =miFecha.getSeconds();
+                                    document.write(miDia+'/'+miMes+'/'+miAno+' :: '+miHora+':'+miMinutos+':'+miSegundos);  
+                                </script>
+                          </cite>
+                        </footer>
+                    </blockquote>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <!--//Mis Scripts-->
+
+    <script>
+
+        // agregando usuario al login
+        var agregandoAndo = document.getElementById("login").innerHTML;
+        agregandoAndo += "David Hernando Nariño";
+        document.getElementById('login').innerHTML =agregandoAndo;
+
+
+        // modificando estilos
+
+        agregandoAndo =document.querySelector("h1");
+        agregandoAndo.classList.add('modificando');
+
+        agregandoAndo =document.querySelector("cite");
+        agregandoAndo.classList.add('modificandoCita');
+
+
+    </script>
+
+</body>
+
+</html>
