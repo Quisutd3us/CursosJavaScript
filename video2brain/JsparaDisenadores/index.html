@@ -12,13 +12,22 @@
 <body>
 
     <div class="jumbotron">
-        <h1 id="cambiando" class="display-3">V2b</h1>
+        <h1  class="display-3">V2b</h1>
         <p class="lead">Curso Js para diseñadores</p>
         <hr class="my-2">
-        <p>More info</p>
+        <p id="cambiando1">More info</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+            <a id="cambiando" class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
         </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="h4" id="textoParrafo"></p>
+                <p>Posicion de palabra <strong>nihil</strong>: <span id="metiendole1"></span></p>
+                <p>Extraccion de parrafo desde el punto: <span id="metiendole2"></span></p>
+            </div>
+        </div>
     </div>
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -27,7 +36,13 @@
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 <script>
-    document.getElementById("cambiando").innerHTML("Mas informacion")
+    document.getElementById("cambiando").innerHTML ="Mas informacion";
+    document.getElementById("cambiando1").innerHTML ="Metiendole al Js puro y Duro";
+    var miParrafo ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nihil accusantium modi.";
+    document.getElementById("textoParrafo").innerHTML =miParrafo;
+    document.getElementById("metiendole1").innerHTML =miParrafo.indexOf("nihil");
+    document.getElementById("metiendole2").innerHTML =miParrafo.substr(62,50);
+
 </script>
 
 
