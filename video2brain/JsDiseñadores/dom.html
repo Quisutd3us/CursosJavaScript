@@ -8,21 +8,45 @@
     <title>Modificando DOM con vanilla JS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
+
+
+
     <style>
-    .modificando{
-        background-color: steelblue;
-        padding: 1rem;
-        color: whitesmoke;
-        font-size: 3rem;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    .modificandoCita{
-        background-color: gray;
-        padding: 0.5rem;
-        color: red;
-        font-size: 1.5rem;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+        .modificando {
+            background-color: steelblue;
+            padding: 1rem;
+            color: whitesmoke;
+            font-size: 3rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .modificandoCita {
+            background-color: gray;
+            padding: 0.5rem;
+            color: red;
+            font-size: 1.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .intro1 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1rem;
+            color: #3c3c3c;
+        }
+
+        .intro2 {
+            font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+            font-size: 1rem;
+            color: #3c3c3c;
+        }
+
+        .limpiar {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: rgb(41, 43, 44);
+        }
     </style>
 </head>
 
@@ -49,11 +73,11 @@
                     laboriosam. Natus ullam nesciunt asperiores, a at id eveniet, corporis aperiam officiis? Vitae, est dicta
                     soluta molestiae! Excepturi nam atque est unde voluptates beatae, qui natus quis perspiciatis accusantium?</p>
                 <div class="card">
-                  <div class="card-block">
-                    <blockquote class="card-blockquote">
-                      <p id="login">Hora de Ingreso del Usuario : </p>
-                      <footer>Fecha : 
-                          <cite id="styleLogin" title="Source title">
+                    <div class="card-block">
+                        <blockquote class="card-blockquote">
+                            <p id="login">Hora de Ingreso del Usuario : </p>
+                            <footer>Fecha :
+                                <cite id="styleLogin" title="Source title">
                                 <script>
                                     var miFecha = new Date();
                                     var miDia = miFecha.getDay();
@@ -65,11 +89,22 @@
                                     document.write(miDia+'/'+miMes+'/'+miAno+' :: '+miHora+':'+miMinutos+':'+miSegundos);  
                                 </script>
                           </cite>
-                        </footer>
-                    </blockquote>
-                  </div>
+                            </footer>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-2"></div>
+            <div class="col-8 text-center">
+                <div class="btn-group btn-group-lg " role="group" aria-label="Basic example">
+                    <button type="button" class="uno btn btn-secondary ">Letra Tipo 1</button>
+                    <button type="button" class="dos btn btn-secondary ">Letra Tipo 2</button>
+                    <button type="button" class="tres btn btn-secondary ">Limpiar</button>
+                </div>
+            </div>
+            <div class="col-2"></div>
         </div>
     </div>
 
@@ -81,22 +116,34 @@
     <!--//Mis Scripts-->
 
     <script>
-
         // agregando usuario al login
         var agregandoAndo = document.getElementById("login").innerHTML;
         agregandoAndo += "David Hernando Nariño";
-        document.getElementById('login').innerHTML =agregandoAndo;
+        document.getElementById('login').innerHTML = agregandoAndo;
 
 
         // modificando estilos
 
-        agregandoAndo =document.querySelector("h1");
+        agregandoAndo = document.querySelector("h1");
         agregandoAndo.classList.add('modificando');
 
-        agregandoAndo =document.querySelector("cite");
+        agregandoAndo = document.querySelector("cite");
         agregandoAndo.classList.add('modificandoCita');
 
+        // Modificando estilos con botones
 
+
+        $("button.uno").click(function () {
+            $("p:first").addClass("intro1");
+        });
+
+        $("button.dos").click(function () {
+            $("p:first").addClass("intro2");
+        });
+        
+        $("button.tres").click(function () {
+            $("p:first").addClass("limpiar");
+        });
     </script>
 
 </body>
