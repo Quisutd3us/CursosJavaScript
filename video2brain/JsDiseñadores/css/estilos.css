@@ -1,0 +1,22 @@
+.estilosResultado{
+    background-color: gray;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.efectoBoton{
+    animation-name: efecto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1000ms;
+}
+
+@keyframes efecto{
+    0% {transform: scale(1)}
+    50% {transform: scale(1.2)}
+    100% {transform: scale(1)}
+}
+
