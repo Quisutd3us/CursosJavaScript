@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodos Estaticos ejercicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+
+    <style>
+   
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Objetos Js</h1>
+        <p class="lead">Metodos Estaticos</p>
+        <hr class="my-2">
+        <br>
+        <p class="leadboton">
+            <script>
+                function Persona(nombre, edad) {
+                    this.nombre = nombre;
+                    this.edad = edad;
+                }
+                Persona.prototype.saludar = function (nombre) {
+                    alert(this.nombre + ", te saluda " + nombre + " !!!")
+                }
+
+                var persona1 = new Persona("Carlos", 34);
+                
+                var miP = document.querySelector("p.leadboton");
+                var miBoton1 = document.createElement('button');
+                miBoton1.textContent = "saludar";
+                miBoton1.classList.add("btn", "btn-lg","bg-inverse", "text-white");
+
+                miBoton1.onclick = function () {
+                    persona1.saludar("Juan");
+                }
+                miP.appendChild(miBoton1);
+            </script>
+        </p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
