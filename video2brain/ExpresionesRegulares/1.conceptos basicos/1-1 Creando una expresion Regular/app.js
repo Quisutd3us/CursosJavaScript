@@ -94,5 +94,33 @@ console.log("Evaluar si la siguiente cadena: '192-19-1982 es mi cumpleaños' emp
 console.log("Resultado: " + evalNum.test('192-19-1982 es mi cumpleaños'));
 console.log("Evaluar si la siguiente cadena: '05-11-2013 es mi cumpleaños'empieza con 2 numeros y termina con 4 ");
 console.log("Resultado: " + evalNum.test('05-11-2013 es mi cumpleaños'));
-console.log("Evaluar si la siguiente cadena: '05-11-2013 es la fecha desde el 2000' empieza con 2 nuemros y termina con 4 ");
+console.log("Evaluar si la siguiente cadena: '05-11-2013 es la fecha desde el 2000' empieza con 2 numeros y termina con 4 ");
 console.log("Resultado: " + evalNum.test('05-11-2013 es la fecha desde el 2000'));
+
+// Buscando y Remplazando
+console.log('\n\nBuscando y Remplazando\n\n');
+var mensaje = 'La vida es bella vale vivirla y disfrutarla';
+var mensajeEncriptado = 'HEY La vida es bella vale vivirla y disfrutarla , ESCRITO EN 2000';
+console.log("Replazar la primera 'a' por 'e' en la frase 'La vida es bella vale vivirla y disfrutarla'");
+console.log(mensaje.replace(/a/, 'e'));
+console.log("Replazar las 'a' por 'e' en la frase 'La vida es bella vale vivirla y disfrutarla'");
+console.log(mensaje.replace(/a/g, 'e'));
+console.log("Replazar las letras de la a-c  por el numero 4 en la frase 'La vida es bella vale vivirla y disfrutarla , escrito en 2000'");
+console.log(mensaje.replace(/[a-c]/g, '4'));
+console.log("Replazar las letras a por 4, e por 3, i por 1, o por 0 en la frase 'HEY La vida es bella vale vivirla y disfrutarla , ESCRITO EN 2000'");
+var frase = mensajeEncriptado.replace(/[a]/g, '4');
+frase = frase.replace(/[e]|[E]/g, '3');
+frase = frase.replace(/[i]|[I]/g, '1');
+frase = frase.replace(/[o]|[O]/g, '0');
+console.log(frase);
+
+// Ciclos y Evaluaciones de las Expresiones Regulares
+console.log('\n\nCiclos y Evaluaciones de las Expresiones Regulares\n\n');
+var mensaje = "Llegaron primero 10 , luego 50, mas tarde 80 .. Y finalmente llego hasta el perro 180 personas!!";
+var patron = /\b(\d+)\b/g;
+var resultado;
+resultado = patron.exec(mensaje)
+console.log(resultado)
+while(resultado = patron.exec(mensaje)){
+    console.log("Se encontro un : ", resultado[1] , ' en la posicion ', resultado.index);
+}
