@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+
     <!-- c3 libreria -->
-    <link rel="stylesheet" href="/libs/c3.css">
+    <link rel="stylesheet" href="libs/c3.css">
 
     <!-- Mis estilos -->
 
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- SCRIPTS -->
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="libs/c3.js"></script>
 
-    <!-- firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-    
     <!-- mis scripts -->
-    <script src="/app.js"></script>
-    
+    <script src="app.js"></script>
+
 
 </head>
+
 <body>
-    
+    <div class="center">
+        <div class="voteApp">
+                
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 comida">
+                        <button id="tacos" type="button" class="btn btn-primary btn-lg">Tacos</button>
+                        <p id="votos_tacos" class="bg-info">
+                            <span class="badge">0</span>
+                            <br> votos
+                        </p>
+                    </div>
+                    <div class="col-6 comida">
+                        <button id="paella" type="button" class="btn btn-success btn-lg">Paella</button>
+                        <p id="votos_paella" class="bg-info">
+                            <span class="badge">0</span>
+                            <br> votos
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-6 comida">
+                        <button id="ceviche" type="button" class="btn btn-info btn-lg">Ceviche</button>
+                        <p id="votos_ceviche" class="bg-info">
+                            <span class="badge">0</span>
+                            <br> votos
+                        </p>
+                    </div>
+                    <div class=" col-6 comida">
+                        <button id="mangu" type="button" class="btn btn-warning btn-lg">Mangú</button>
+                        <p id="votos_mangu" class="bg-info">
+                            <span class="badge">0</span>
+                            <br> votos
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="total">
+                <span class="badge">0</span>
+                <br> Total de votos emitidos
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
